@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 				min: 400,
 				fadeSpeed: 500
 				});
-				
+
 				// smoothscroll
 				jQuery('#top-link').click(function(e) {
 				e.preventDefault();
@@ -43,26 +43,26 @@ jQuery(document).ready(function($) {
 			});
 
 
-	
-					
+
+
 /*-------------------------------------------------------------*/
 //				Tooltip
 /*------------------------------------------------------------*/
-			
+
 			jQuery(".hastip").tipTip({defaultPosition: "top"});
-			
-			
-			
+
+
+
 /*-------------------------------------------------------------*/
-//				PrettyPhoto 
+//				PrettyPhoto
 /*------------------------------------------------------------*/
 
 			jQuery("a[rel^='prettyPhoto']").prettyPhoto({
 						theme: 'light_rounded',
 						counter_separator_label: ' of ',
-						social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&layout=button_count&show_faces=true&width=500&action=like&font&colorscheme=light&height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div><div class="google_plus"><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div><script type="text/javascript">(function(){ var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })();</script></div></div>' 
+						social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&layout=button_count&show_faces=true&width=500&action=like&font&colorscheme=light&height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div><div class="google_plus"><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div><script type="text/javascript">(function(){ var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })();</script></div></div>'
 					});
-					
+
 
 /*-------------------------------------------------------------*/
 //				Image Hover
@@ -86,11 +86,11 @@ jQuery(document).ready(function($) {
 /*-------------------------------------------------------------*/
 //				Tabs
 /*------------------------------------------------------------*/
-					
+
 					jQuery( function( ) {
 						jQuery( "ul.tabs" ).tabs( "div.panes > div" );
-					} );					
-					
+					} );
+
 
 
 /*-------------------------------------------------------------*/
@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
 
 						jQuery(".toggle-container").hide();
 
-						 
+
 
 						jQuery(".trigger").toggle(function(){
 
@@ -117,7 +117,7 @@ jQuery(document).ready(function($) {
 
 						});
 
-						
+
 
 						jQuery('.trigger a').hover(function() {
 
@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
 
 					jQuery('.accordion').hide();
 
-		
+
 
 					jQuery('.trigger-button').click(function() {
 
@@ -149,11 +149,11 @@ jQuery(document).ready(function($) {
 
 							jQuery(this).addClass("active");
 
-						 } 
+						 }
 
 					 });
 
-					 
+
 
 					 jQuery('.trigger-button').hover(function() {
 
@@ -163,62 +163,62 @@ jQuery(document).ready(function($) {
 
 							jQuery(this).stop(true,false).animate({color: '#888'},150);
 
-					});			
-			
+					});
+
 /*-------------------------------------------------------------*/
 //				Window Scroll
 /*------------------------------------------------------------*/
 
-	var has_class = jQuery('body').hasClass('zp-landing');
-	
-	if( !has_class ){
-		var menu_orig_pos = jQuery('.nav-primary').position().top;
-		var secondary_nav = jQuery('.nav-secondary');
-	
-	
-		jQuery(window).scroll(function() {
-				scrolltop = jQuery(window).scrollTop();
-				var menuPosition = jQuery('.nav-primary').position().top;
-				
-		
-			
-		if(jQuery( document ).width() > 1024){
-				if( scrolltop > menuPosition ) {
-					jQuery('.nav-primary').removeClass('zp_show');
-					jQuery('.nav-primary').addClass('zp_hide');
-					
-					jQuery('.nav-secondary').removeClass('zp_hide');
-					jQuery('.nav-secondary').addClass('zp_show');
-									
-				}
-				if( scrolltop < menu_orig_pos ) {
-					jQuery('.nav-primary').removeClass('zp_hide');
-					jQuery('.nav-primary').addClass('zp_show');
-					
-					jQuery('.nav-secondary').removeClass('zp_show');
-					jQuery('.nav-secondary').addClass('zp_hide');
-	
-				}
-			}
-		});	
-	}
+	// var has_class = jQuery('body').hasClass('zp-landing');
+
+	// if( !has_class ){
+	// 	var menu_orig_pos = jQuery('.nav-primary').position().top;
+	// 	var secondary_nav = jQuery('.nav-secondary');
+
+
+	// 	jQuery(window).scroll(function() {
+	// 			scrolltop = jQuery(window).scrollTop();
+	// 			var menuPosition = jQuery('.nav-primary').position().top;
+
+
+
+	// 	if(jQuery( document ).width() > 1024){
+	// 			// if( scrolltop > menuPosition ) {
+	// 			// 	jQuery('.nav-primary').removeClass('zp_show');
+	// 			// 	jQuery('.nav-primary').addClass('zp_hide');
+
+	// 			// 	jQuery('.nav-secondary').removeClass('zp_hide');
+	// 			// 	jQuery('.nav-secondary').addClass('zp_show');
+
+	// 			// }
+	// 			// if( scrolltop < menu_orig_pos ) {
+	// 			// 	jQuery('.nav-primary').removeClass('zp_hide');
+	// 			// 	jQuery('.nav-primary').addClass('zp_show');
+
+	// 			// 	jQuery('.nav-secondary').removeClass('zp_show');
+	// 			// 	jQuery('.nav-secondary').addClass('zp_hide');
+
+	// 			// }
+	// 		}
+	// 	});
+	// }
 
 /*-------------------------------------------------------------*/
 //				Element Animation
 /*------------------------------------------------------------*/
 	//return jQuery.waypoints('viewportHeight') - jQuery(this).height() + 100;
-		
+
 	jQuery(' .portfolio_shortcode, .zp-grid-wrapper').waypoint(function() {
-			jQuery(this).addClass('zp_start_animation');		
+			jQuery(this).addClass('zp_start_animation');
 	}, {
 		offset:'100%'
 	});
-	
+
 	// Animation to service box
 	jQuery('.special-services-box').waypoint(function() {
 		var children = jQuery(".special-services-box");
 		var index = 0;
-	
+
 		function addClassToNextChild() {
 			if (index == children.length) return;
 			children.eq(index++).addClass("zp_start_animation");
@@ -227,13 +227,13 @@ jQuery(document).ready(function($) {
 		addClassToNextChild();
 	}, {
 		offset:'100%'
-	});	
+	});
 
 	// Animation to team box
 	jQuery('.team').waypoint(function() {
 		var children = jQuery(".team");
 		var index = 0;
-	
+
 		function addClassToNextChild() {
 			if (index == children.length) return;
 			children.eq(index++).addClass("zp_start_animation");
@@ -242,13 +242,13 @@ jQuery(document).ready(function($) {
 		addClassToNextChild();
 	}, {
 		offset:'100%'
-	});		
-	
+	});
+
 	//// Animation to Columns
 	jQuery('.columns').waypoint(function() {
 		var children = jQuery(".columns");
 		var index = 0;
-	
+
 		function addClassToNextChild() {
 			if (index == children.length) return;
 			children.eq(index++).addClass("zp_start_animation");
@@ -257,19 +257,19 @@ jQuery(document).ready(function($) {
 		addClassToNextChild();
 	}, {
 		offset:'100%'
-	});	
+	});
 
 
 
-	
+
 });
 
 
 /*-------------------------------------------------------------*/
 //			Set sidebar height
-/*------------------------------------------------------------*/	
+/*------------------------------------------------------------*/
 jQuery(window).load(function(){
-		
+
 		var site_height = jQuery('.site-container').height();
 		var side_height = jQuery('.sidebar').height();
 
@@ -279,12 +279,12 @@ jQuery(window).load(function(){
 			jQuery('.sidebar').css({"height":"auto"});
 		}
 
-		
+
 });
 
 /*-------------------------------------------------------------*/
 //			Flexslider Caption Animation
-/*------------------------------------------------------------*/	
+/*------------------------------------------------------------*/
 
 function zp_sliderCaptionAnimate(slider) {
  	var $currentSlide = jQuery('.homeslider .slides li').not('.clone').eq(slider.animatingTo),
