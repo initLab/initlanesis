@@ -1,7 +1,7 @@
 <?php
 /*----------------------------------------
 *
-* 	Social Icon Widget 	
+* 	Social Icon Widget
 *
 -----------------------------------------*/
 
@@ -69,7 +69,7 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 			'defaults'				=> '',
 			'color' 				=> '',
 			'hover'					=>''
-			
+
 		);
 
 		/**
@@ -82,85 +82,85 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 		 */
 		$this->profiles = array(
 			'dribble' => array(
-				'label'	  => __( 'Dribble URI', 'novo' ),
+				'label'	  => __( 'Dribble URI', 'initlanesis' ),
 				'pattern' => '<li class="social-dribble"><a class="hastip" title="dribble" target="_blank" href="%s" %s>D</a></li>',
 				'background_color' => array(
 				'background-color'=> '#F14280'
 				)
-				
+
 			),
 			'behance' => array(
-				'label'	  => __( 'Behance URI', 'novo' ),
+				'label'	  => __( 'Behance URI', 'initlanesis' ),
 				'pattern' => '<li class="social-behance"><a class="hastip" title="behance" target="_blank" href="%s" %s>E</a></li>',
 				'background_color' => array(
 				'background-color'=> '#319DD4'
 				)
 			),
 			'facebook' => array(
-				'label'	  => __( 'Facebook URI', 'novo' ),
+				'label'	  => __( 'Facebook URI', 'initlanesis' ),
 				'pattern' => '<li class="social-facebook"><a class="hastip" title="facebook"  target="_blank" href="%s" %s>F</a></li>',
 				'background_color' => array(
 				'background-color'=> '#3C5A98'
 				)
 			),
 			'gplus' => array(
-				'label'	  => __( 'Google+ URI', 'novo' ),
+				'label'	  => __( 'Google+ URI', 'initlanesis' ),
 				'pattern' => '<li class="social-gplus"><a class="hastip" title="google+"  target="_blank" href="%s" %s>G</a></li>',
 				'background_color' => array(
 				'background-color'=> '#D94A3A'
 				)
 			),
 			'linkedin' => array(
-				'label'	  => __( 'Linkedin URI', 'novo' ),
+				'label'	  => __( 'Linkedin URI', 'initlanesis' ),
 				'pattern' => '<li class="social-linkedin"><a class="hastip" title="linkedin"  target="_blank" href="%s" %s>I</a></li>',
 				'background_color' => array(
 				'background-color'=> '#007BB6'
 				)
 			),
 			'deviantart' => array(
-				'label'	  => __( 'DeviantART URI', 'novo' ),
+				'label'	  => __( 'DeviantART URI', 'initlanesis' ),
 				'pattern' => '<li class="social-deviantart"><a class="hastip" title="deviantart"  target="_blank" href="%s" %s>J</a></li>',
 				'background_color' => array(
 				'background-color'=> '#9DA79D'
 				)
 			),
 			'twitter' => array(
-				'label'	  => __( 'Twitter URI', 'novo' ),
+				'label'	  => __( 'Twitter URI', 'initlanesis' ),
 				'pattern' => '<li class="social-twitter"><a class="hastip" title="twitter"  target="_blank"  href="%s" %s>L</a></li>',
 				'background_color' => array(
 				'background-color'=> '#2DAAE2'
 				)
 			),
 			'vimeo' => array(
-				'label'	  => __( 'Vimeo URI', 'novo' ),
+				'label'	  => __( 'Vimeo URI', 'initlanesis' ),
 				'pattern' => '<li class="social-vimeo"><a class="hastip" title="vimeo"  target="_blank"  href="%s" %s>V</a></li>',
 				'background_color' => array(
 				'background-color'=> '#52B6EC'
 				)
 			),
 			'pinterest' => array(
-				'label'	  => __( 'Pinterest URI', 'novo' ),
+				'label'	  => __( 'Pinterest URI', 'initlanesis' ),
 				'pattern' => '<li class="social-pinterest"><a class="hastip" title="pinterest"  target="_blank"  href="%s" %s>:</a></li>',
 				'background_color' => array(
 				'background-color'=> '#D62229'
 				)
-			),		
+			),
 			'flickr' => array(
-				'label'	  => __( 'Flickr URI', 'novo' ),
+				'label'	  => __( 'Flickr URI', 'initlanesis' ),
 				'pattern' => '<li class="social-flickr"><a class="hastip" title="flickr"  target="_blank"  href="%s" %s>N</a></li>',
 				'background_color' => array(
 				'background-color'=> '#0063D6'
 				)
-			),		
+			),
 			'tumblr' => array(
-				'label'	  => __( 'Tumblr URI', 'novo' ),
+				'label'	  => __( 'Tumblr URI', 'initlanesis' ),
 				'pattern' => '<li class="social-tumblr"><a class="hastip" title="tumblr"  target="_blank"  href="%s" %s>O</a></li>',
 				'background_color' => array(
 				'background-color'=> '#007BB6'
 				)
-			),			
+			),
 			'youtube' => array(
-				'label'	  => __( 'YouTube URI', 'novo' ),
+				'label'	  => __( 'YouTube URI', 'initlanesis' ),
 				'pattern' => '<li class="social-youtube"><a class="hastip" title="youtube"  target="_blank"  href="%s" %s>X</a></li>',
 				'background_color' => array(
 				'background-color'=> '#F14280'
@@ -171,7 +171,7 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname'	  => 'zp_social_icons',
-			'description' => __( 'Displays select social icons.', 'novo' ),
+			'description' => __( 'Displays select social icons.', 'initlanesis' ),
 		);
 
 		$control_ops = array(
@@ -180,11 +180,11 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 			#'height'  => 350,
 		);
 
-		$this->WP_Widget( 'zp_social_icons', __( 'ZP Social Icons', 'novo' ), $widget_ops, $control_ops );
+		$this->WP_Widget( 'zp_social_icons', __( 'ZP Social Icons', 'initlanesis' ), $widget_ops, $control_ops );
 
 		/** Load CSS in <head> */
 		add_action( 'wp_head', array( $this, 'css' ) );
-		
+
 		/** Load script */
 		//add_action('get_header', 'child_load_scripts');
 
@@ -202,22 +202,22 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $this->defaults );
 		?>
 
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','novo' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" /></p>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','initlanesis' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" /></p>
 
-		<p><label><input id="<?php echo $this->get_field_id( 'new_window' ); ?>" type="checkbox" name="<?php echo $this->get_field_name( 'new_window' ); ?>" value="1" <?php checked( 1, $instance['new_window'] ); ?>/> <?php esc_html_e( 'Open links in new window?', 'novo' ); ?></label></p>
+		<p><label><input id="<?php echo $this->get_field_id( 'new_window' ); ?>" type="checkbox" name="<?php echo $this->get_field_name( 'new_window' ); ?>" value="1" <?php checked( 1, $instance['new_window'] ); ?>/> <?php esc_html_e( 'Open links in new window?', 'initlanesis' ); ?></label></p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'alignment' ); ?>"><?php _e( 'Alignment', 'novo' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'alignment' ); ?>"><?php _e( 'Alignment', 'initlanesis' ); ?>:</label>
 			<select id="<?php echo $this->get_field_id( 'alignment' ); ?>" name="<?php echo $this->get_field_name( 'alignment' ); ?>">
-				<option value="alignleft" <?php selected( 'alignright', $instance['alignment'] ) ?>><?php _e( 'Align Left', 'novo' ); ?></option>
-				<option value="alignright" <?php selected( 'alignright', $instance['alignment'] ) ?>><?php _e( 'Align Right', 'novo' ); ?></option>
+				<option value="alignleft" <?php selected( 'alignright', $instance['alignment'] ) ?>><?php _e( 'Align Left', 'initlanesis' ); ?></option>
+				<option value="alignright" <?php selected( 'alignright', $instance['alignment'] ) ?>><?php _e( 'Align Right', 'initlanesis' ); ?></option>
 			</select>
 		</p>
 
 		<hr style="background: #ccc; border: 0; height: 1px; margin: 20px 0;" />
 
 		<?php
-		
+
 		foreach ( (array) $this->profiles as $profile => $data ) {
 
 			printf( '<p><label for="%s">%s:</label>', esc_attr( $this->get_field_id( $profile ) ), esc_attr( $data['label'] ) );
@@ -310,7 +310,7 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 		.zp_social_icons {
 			overflow: hidden;
 		}
-		
+
 		.zp_social_icons .alignleft, .zp_social_icons .alignright {
 			margin: 0; padding: 0;
 		}
@@ -340,7 +340,7 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 
 		/* tooltip CSS
 		-------------------------------------------------------------*/
-		
+
 		#tiptip_holder {
 			background: url('.get_stylesheet_directory_uri().'/include/widgets/images/bg-popup.png) no-repeat scroll 12px bottom;
 			display: block;
@@ -412,9 +412,9 @@ class ZP_SocialIcons_Widget extends WP_Widget {
 			margin-left: -7px;
 			border-left-color: rgb(102,102,102);
 			border-left-color: rgba(102, 102, 102, 0.92);
-		}	
+		}
 		#tiptip_content:after{
-			background: #fff;	
+			background: #fff;
 		}
 		';
 

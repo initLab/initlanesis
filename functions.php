@@ -6,11 +6,11 @@ require_once(  get_template_directory().'/lib/init.php'  );
 add_theme_support( 'html5' );
 
 /** Localization */
-load_child_theme_textdomain(  'novo', apply_filters(  'child_theme_textdomain', get_stylesheet_directory(  ) . '/languages', 'novo'  )  );
+load_child_theme_textdomain(  'initlanesis', apply_filters(  'child_theme_textdomain', get_stylesheet_directory(  ) . '/languages', 'initlanesis'  )  );
 
 /** Chhild Theme */
-define(  'CHILD_THEME_NAME', 'novo'   );
-define(  'CHILD_THEME_URL', 'http://demo.zigzagpress.com/novo/'   );
+define(  'CHILD_THEME_NAME', 'initlanesis'   );
+define(  'CHILD_THEME_URL', 'https://github.com/initLab/initlanesis/'   );
 
 /** Custom Post Types */
 require_once(  get_stylesheet_directory(  ) . '/include/cpt/super-cpt.php'   );
@@ -63,30 +63,30 @@ add_action(  'wp_enqueue_scripts', 'zp_print_styles'   );
 function zp_print_styles(   ) {
 
 	wp_register_style(  'pretty_photo_css', get_stylesheet_directory_uri(   ).'/css/prettyPhoto.css', '', '3.1.5' );
-	wp_register_style(  'flexslider-css', get_stylesheet_directory_uri(   ).'/css/flexslider.css' , '', '3.1.5' ); 	
-	wp_register_style(  'shortcode-css', get_stylesheet_directory_uri(   ).'/include/shortcodes/shortcode.css'  , '', '1.0' );	
-	wp_register_style(  'mobile-css', get_stylesheet_directory_uri(   ).'/css/mobile.css' ,'','1.0'  );	
+	wp_register_style(  'flexslider-css', get_stylesheet_directory_uri(   ).'/css/flexslider.css' , '', '3.1.5' );
+	wp_register_style(  'shortcode-css', get_stylesheet_directory_uri(   ).'/include/shortcodes/shortcode.css'  , '', '1.0' );
+	wp_register_style(  'mobile-css', get_stylesheet_directory_uri(   ).'/css/mobile.css' ,'','1.0'  );
 
-	wp_enqueue_style(  'pretty_photo_css'  );	
-	wp_enqueue_style(  'shortcode-css'   );		
+	wp_enqueue_style(  'pretty_photo_css'  );
+	wp_enqueue_style(  'shortcode-css'   );
 	wp_enqueue_style(  'flexslider-css'   );
-	
+
 	// Add mobile style
 	wp_enqueue_style(  'mobile-css'   );
-		
-	wp_enqueue_style(  'component', get_stylesheet_directory_uri(   ).'/css/component.css' ,'','1.0'  );	
-	
+
+	wp_enqueue_style(  'component', get_stylesheet_directory_uri(   ).'/css/component.css' ,'','1.0'  );
+
 	$color = strtolower(  genesis_get_option(  'zp_color_scheme' ,  ZP_SETTINGS_FIELD  )  );
 	if(  $color != 'default'  )
-		wp_enqueue_style(  'color-scheme', get_stylesheet_directory_uri(   ).'/css/color/'.$color.'.css' ,'','1.0'  );	
+		wp_enqueue_style(  'color-scheme', get_stylesheet_directory_uri(   ).'/css/color/'.$color.'.css' ,'','1.0'  );
 }
 
 /** Shortcode Styles */
-add_action(  'admin_enqueue_scripts', 'zp_codes_admin_init'  );  
+add_action(  'admin_enqueue_scripts', 'zp_codes_admin_init'  );
 function zp_codes_admin_init(   ){
 	global $current_screen;
 	if(  $current_screen->base == 'post'  ){
-	
+
 		//enqueue the script and CSS files for the TinyMCE editor formatting buttons
 		wp_enqueue_script(  'jquery'  );
 		wp_enqueue_script(  'jquery-ui-dialog'  );
@@ -102,28 +102,28 @@ function zp_codes_admin_init(   ){
 /** Theme Scripts */
 add_action(  'wp_enqueue_scripts', 'zp_theme_js'  );
 function zp_theme_js(   ) {
-		
-	wp_register_script( 'jquery_custom', get_stylesheet_directory_uri(  ).'/js/jquery.custom.js', array( 'jquery' ), '1.4');	
+
+	wp_register_script( 'jquery_custom', get_stylesheet_directory_uri(  ).'/js/jquery.custom.js', array( 'jquery' ), '1.4');
 	wp_register_script( 'jquery_easing_js', get_stylesheet_directory_uri(  ) . '/js/jquery-easing.js',array( 'jquery' ), '1.3' );
-	wp_register_script( 'jquery_flexslider_js', get_stylesheet_directory_uri(  ).'/js/jquery.flexslider.js',array( 'jquery' ), '2.0' ); 
-	wp_register_script( 'jquery_prettyphoto_js', get_stylesheet_directory_uri(  ) . '/js/jquery.prettyPhoto.js',array( 'jquery' ),'3.1.5' );		
-	wp_register_script( 'jQuery_ScrollTo_min_js', get_stylesheet_directory_uri(  ) . '/js/jquery.ScrollTo.min.js',array( 'jquery' ) , '1.4.3.1');		
-	wp_register_script( 'jquery_tipTip', get_stylesheet_directory_uri(  ).'/js/jquery.tipTip.minified.js',array( 'jquery' ), '1.3' );	
-	wp_register_script( 'jquery_Tools', get_stylesheet_directory_uri(  ) . '/js/jquery.Tools.js',array( 'jquery' ),'1.2.7' );	
+	wp_register_script( 'jquery_flexslider_js', get_stylesheet_directory_uri(  ).'/js/jquery.flexslider.js',array( 'jquery' ), '2.0' );
+	wp_register_script( 'jquery_prettyphoto_js', get_stylesheet_directory_uri(  ) . '/js/jquery.prettyPhoto.js',array( 'jquery' ),'3.1.5' );
+	wp_register_script( 'jQuery_ScrollTo_min_js', get_stylesheet_directory_uri(  ) . '/js/jquery.ScrollTo.min.js',array( 'jquery' ) , '1.4.3.1');
+	wp_register_script( 'jquery_tipTip', get_stylesheet_directory_uri(  ).'/js/jquery.tipTip.minified.js',array( 'jquery' ), '1.3' );
+	wp_register_script( 'jquery_Tools', get_stylesheet_directory_uri(  ) . '/js/jquery.Tools.js',array( 'jquery' ),'1.2.7' );
 	wp_register_script( 'jquery_cycle', get_stylesheet_directory_uri(  ) . '/js/jquery.cycle.lite.js',array( 'jquery' ) , '1.7');
 	wp_register_script( 'jquery_carouFredSel', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.carouFredSel.min.js', array( 'jquery' ), '6.2.1' );
 	wp_register_script( 'jquery_mousewheel', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.mousewheel.min.js',array( 'jquery' ), '3.0.6' );
 	wp_register_script( 'jquery_touchswipe', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.touchSwipe.min.js',array( 'jquery' ), '1.3.3');
 	wp_register_script( 'jquery_transit', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.transit.min.js',array( 'jquery' ), '0.9.9');
-	wp_register_script( 'jquery_throttle', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.ba-throttle-debounce.min.js', array( 'jquery' ), '1.1' );	
+	wp_register_script( 'jquery_throttle', get_stylesheet_directory_uri(  ) . '/js/carousel/jquery.ba-throttle-debounce.min.js', array( 'jquery' ), '1.1' );
 	wp_register_script( 'jquery_fitvids', get_stylesheet_directory_uri(  ) . '/js/jquery.fitvids.js',array( 'jquery' ), '1.0');
 	wp_register_script( 'jquery_jplayer', get_stylesheet_directory_uri(  ) . '/js/jquery.jplayer.min.js', array( 'jquery' ), '2.2.0' );
 	wp_register_script( 'postlike', get_stylesheet_directory_uri(  ) . '/js/postlike.js' );
 	wp_register_script( 'modernizr', get_stylesheet_directory_uri(  ) . '/js/modernizr.js' );
 	wp_register_script( 'modernizr_custom', get_stylesheet_directory_uri(  ) . '/js/portfolio/modernizr_custom.js' );
-	wp_register_script( 'classie', get_stylesheet_directory_uri(  ) . '/js/portfolio/classie.js',array( 'jquery' ), '1.0', true );		
+	wp_register_script( 'classie', get_stylesheet_directory_uri(  ) . '/js/portfolio/classie.js',array( 'jquery' ), '1.0', true );
 	wp_register_script( 'thumbnailGridEffects', get_stylesheet_directory_uri(  ) . '/js/portfolio/thumbnailGridEffects.js',array( 'jquery' ), '1.0', true );
-	wp_register_script( 'waypoints', get_stylesheet_directory_uri(  ) . '/js/waypoints.js',array( 'jquery' ), '2.0.3', false );		
+	wp_register_script( 'waypoints', get_stylesheet_directory_uri(  ) . '/js/waypoints.js',array( 'jquery' ), '2.0.3', false );
 
 
 	wp_enqueue_script(  'jquery'  );
@@ -133,13 +133,13 @@ function zp_theme_js(   ) {
 	wp_enqueue_script(  'jquery_tipTip'  );
 	wp_enqueue_script(  'jquery_Tools'  );
 	wp_enqueue_script(  'postlike'  );
-	wp_enqueue_script(  'modernizr'  );	
+	wp_enqueue_script(  'modernizr'  );
 	wp_enqueue_script(  'waypoints'  );
-	wp_enqueue_script(  'jquery_custom'  );	
+	wp_enqueue_script(  'jquery_custom'  );
 
 	//enqueue script in the footer
 	wp_enqueue_script( 'sidebar_script', get_stylesheet_directory_uri(  ) . '/js/sidebar.js', array(), '1.0', true );
-		
+
 }
 
 /** Custom CSS */
@@ -158,72 +158,72 @@ function zp_favicon_url(  ) {
 	if (  $favicon_link  ) {
 		$favicon = $favicon_link;
 			return $favicon;
-	}else 
+	}else
 		return false;
 }
 
 /** Custom Logo */
 add_action( 'wp_head', 'zp_custom_logo' );
 function zp_custom_logo() {
-	
+
 	//check if Header was set to image or text
 	if( genesis_get_option( 'blog_title' ) == 'image'){
 ?>
 <style type="text/css">
 		<?php 	if ( genesis_get_option( 'zp_logo', ZP_SETTINGS_FIELD ) ) { ?>
 			 .header-image .site-title a {
-					background: url("<?php echo genesis_get_option( 'zp_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_logo_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;			
+					background: url("<?php echo genesis_get_option( 'zp_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_logo_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;
 			}
-			.header-image .title-area, .header-image .site-title, .header-image .site-title a{	
+			.header-image .title-area, .header-image .site-title, .header-image .site-title a{
 					height: <?php echo genesis_get_option( 'zp_logo_height', ZP_SETTINGS_FIELD ); ?> !important;
 					width: <?php echo genesis_get_option( 'zp_logo_width', ZP_SETTINGS_FIELD ); ?> !important;
 			}
-			
+
 		<?php } ?>
 
 		<?php 	if ( genesis_get_option( 'zp_600_logo', ZP_SETTINGS_FIELD ) ) { ?>
 		 @media only screen and (max-width: 768px) {
 			.header-image .site-title a {
-					background: url("<?php echo genesis_get_option( 'zp_600_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_600_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;			
+					background: url("<?php echo genesis_get_option( 'zp_600_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_600_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;
 			}
 
-			.header-image .title-area, .header-image .site-title, .header-image .site-title a{		
+			.header-image .title-area, .header-image .site-title, .header-image .site-title a{
 					height: <?php echo genesis_get_option( 'zp_600_logo_height', ZP_SETTINGS_FIELD ); ?> !important;
 					width: <?php echo genesis_get_option( 'zp_600_logo_width', ZP_SETTINGS_FIELD ); ?> !important;
 					max-width: 600px;
-			}			
+			}
 		 }
 		<?php } ?>
 
 		<?php 	if ( genesis_get_option( 'zp_480_logo', ZP_SETTINGS_FIELD ) ) { ?>
 		@media only screen and (max-width: 600px) {
 			.header-image .site-title a {
-					background: url("<?php echo genesis_get_option( 'zp_480_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_480_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;			
+					background: url("<?php echo genesis_get_option( 'zp_480_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_480_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;
 			}
 
-			.header-image .title-area, .header-image .site-title, .header-image .site-title a {			
+			.header-image .title-area, .header-image .site-title, .header-image .site-title a {
 					height: <?php echo genesis_get_option( 'zp_480_logo_height', ZP_SETTINGS_FIELD ); ?> !important;
 					width: <?php echo genesis_get_option( 'zp_480_logo_width', ZP_SETTINGS_FIELD ); ?> !important;
 					max-width: 480px;
-			}			
+			}
 		}
 		<?php } ?>
 
 		<?php 	if ( genesis_get_option( 'zp_320_logo', ZP_SETTINGS_FIELD ) ) { ?>
-		@media only screen and (max-width: 480px) {		
+		@media only screen and (max-width: 480px) {
 			.header-image .site-title a {
-					background: url("<?php echo genesis_get_option( 'zp_320_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_320_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;			
+					background: url("<?php echo genesis_get_option( 'zp_320_logo', ZP_SETTINGS_FIELD ); ?>") no-repeat scroll <?php echo genesis_get_option( 'zp_320_background_pos', ZP_SETTINGS_FIELD ); ?> transparent !important;
 			}
 
-			.header-image .title-area, .header-image .site-title, .header-image .site-title a {		
+			.header-image .title-area, .header-image .site-title, .header-image .site-title a {
 					height: <?php echo genesis_get_option( 'zp_320_logo_height', ZP_SETTINGS_FIELD ); ?> !important;
 					width: <?php echo genesis_get_option( 'zp_320_logo_width', ZP_SETTINGS_FIELD ); ?> !important;
 					max-width: 320px;
-			}			
+			}
 		}
 		<?php } ?>
 
-						
+
         </style>
 <?php
 }
@@ -238,13 +238,13 @@ add_filter( 'the_content_more_link', 'zp_read_more_link' );
 add_filter(  'get_the_content_more_link', 'zp_read_more_link'  );
 
 function zp_read_more_link(  ) {
-    return '&hellip; <a class="more-link" href="' . get_permalink(  ) . '"> '.__( 'Read More','novo' ).'</a>';
+    return '&hellip; <a class="more-link" href="' . get_permalink(  ) . '"> '.__( 'Read More','initlanesis' ).'</a>';
 }
 
 /** Custom Post Meta */
 add_filter(  'genesis_post_meta', 'zp_post_meta_filter'  );
 function zp_post_meta_filter( $post_meta ) {
-	$post_meta = '[post_categories sep=", " before="<span>'.__( 'Categories','novo' ).': </span>"] [post_tags sep=", " before="<span>'.__( 'Tags','novo' ).': </span>"]';
+	$post_meta = '[post_categories sep=", " before="<span>'.__( 'Categories','initlanesis' ).': </span>"] [post_tags sep=", " before="<span>'.__( 'Tags','initlanesis' ).': </span>"]';
 	return $post_meta;
 }
 
@@ -259,14 +259,14 @@ function zp_breadcrumb_args(  $args  ) {
     $args['list_sep']                = ', '; // Genesis 1.5 and later
     $args['display']                 = true;
     $args['labels']['prefix']        = '';
-    $args['labels']['author']        = __( 'Archives for ','novo' );
-    $args['labels']['category']      = __( 'Archives for ','novo' ); // Genesis 1.6 and later
-    $args['labels']['tag']           = __( 'Archives for ','novo' );
-    $args['labels']['date']          = __( 'Archives for ','novo' );
-    $args['labels']['search']        = __( 'Search for ','novo' );
-    $args['labels']['tax']           = __( 'Archives for ','novo' );
-    $args['labels']['post_type']     = __( 'Archives for ','novo' );
-    $args['labels']['404']           = __( '404','novo' ); // Genesis 1.5 and later
+    $args['labels']['author']        = __( 'Archives for ','initlanesis' );
+    $args['labels']['category']      = __( 'Archives for ','initlanesis' ); // Genesis 1.6 and later
+    $args['labels']['tag']           = __( 'Archives for ','initlanesis' );
+    $args['labels']['date']          = __( 'Archives for ','initlanesis' );
+    $args['labels']['search']        = __( 'Search for ','initlanesis' );
+    $args['labels']['tax']           = __( 'Archives for ','initlanesis' );
+    $args['labels']['post_type']     = __( 'Archives for ','initlanesis' );
+    $args['labels']['404']           = __( '404','initlanesis' ); // Genesis 1.5 and later
     return $args;
 }
 
@@ -278,7 +278,7 @@ add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
 add_action( 'genesis_entry_header', 'zp_genesis_post_info_sep', 9 );
 function zp_genesis_post_info_sep(){
 	if(!is_page()){
-		echo '<hr class="small">';	
+		echo '<hr class="small">';
 	}
 }
 
@@ -286,7 +286,7 @@ function zp_genesis_post_info_sep(){
 add_action( 'genesis_entry_header', 'zp_genesis_page_title_sep', 13 );
 function zp_genesis_page_title_sep(){
 	if(is_page() && !is_front_page() ){
-		echo '<hr class="small">';	
+		echo '<hr class="small">';
 	}
 }
 
@@ -297,21 +297,21 @@ function zp_remove_page_titles() {
         remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
     }
 }
- 
- 
- 
+
+
+
 //add_action( 'get_header', 'child_remove_page_titles' );
 function child_remove_page_titles() {
     if ( is_page( 28 ) ) {
         remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
     }
 }
- 
- 
+
+
 add_action ( 'genesis_entry_header', 'zp_featured_image_title_singular', 2 );
 function zp_featured_image_title_singular() {
- 
-	if ( is_page() && genesis_image( array( 'size' => 'Blog' ) ) ){ 
+
+	if ( is_page() && genesis_image( array( 'size' => 'Blog' ) ) ){
 		echo '<div class="media_container">';
 		genesis_image( array( 'size' => 'Blog' ) );
 		echo '</div>';
@@ -351,13 +351,13 @@ function zp_do_custom_footer(  ) {
   </div>
 </div>
 <?php endif;?>
-<div class="creds">&copy; 
+<div class="creds">&copy;
   			<?php
 			if(  $copyright ){
 				echo $copyright ;
 			}else{
 				?>
-                
+
 		<?php echo date(  "Y" ); bloginfo( 'name' ); ?>
   ::
   <?php bloginfo(  'description' );
@@ -367,10 +367,10 @@ function zp_do_custom_footer(  ) {
 <?php }
 
 /** Widgets */
-genesis_register_sidebar( array( 
+genesis_register_sidebar( array(
 	'name'=>'Bottom Widget',
 	'id' => 'bottom-widget',
-	'description' => __( 'This is the widget area at the bottom of the page right of footer credits.','novo' ),
+	'description' => __( 'This is the widget area at the bottom of the page right of footer credits.','initlanesis' ),
 	'before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget'  => '</div>',
 	'before_title'=>'<div class="section-title"> <span>','after_title'=>'</span></div>'
  ) );
@@ -403,20 +403,20 @@ function zp_add_header_welcome_text(){
 		}
     ?>
 	</div><hr class="small">
-<?php 		
+<?php
 }
 
 /* Add Like Post in archives  */
 
 add_filter( 'genesis_post_info', 'zp_post_info_filter' );
 function zp_post_info_filter($post_info) {
-	
+
 	if( !is_single() ){
 		$like = '[post_like]';
 	}else{
 		$like='';
 	}
-	
+
 	$post_info = '[post_date] by [post_author_posts_link] [post_comments]'.$like;
 	return $post_info;
 }
@@ -432,11 +432,11 @@ $likes = get_post_meta($post->ID,'zp_like',true);
 ?>
 <div class="post_like">
 <p class="likes text-right <?php echo $post->ID; ?>"><span class="icon-heart <?php echo $post->ID; ?>">R</span>
-<span class= "textLike"><?php _e('Like this post','novo');?></span>
+<span class= "textLike"><?php _e('Like this post','initlanesis');?></span>
 <span class="likes_value"><em>(<?php echo $likes ? $likes: '0';?>)</em></span>
 </p>
 </div>
-<?php 	
+<?php
 }
 }
 
@@ -447,9 +447,9 @@ function zp_add_like_variables(){
         <script>
             var template_directory = "<?php echo get_template_directory_uri(); ?>";
             var ajax_url = "<?php echo admin_url('admin-ajax.php'); ?>";
-			var like_msg = "<?php _e('You liked this post', 'novo'); ?>";
+			var like_msg = "<?php _e('You liked this post', 'initlanesis'); ?>";
         </script>
-<?php 		
+<?php
 }
 
 /*
@@ -468,39 +468,39 @@ function zp_custom_sidebar(){
 
 add_action( 'genesis_after_footer', 'zp_close_site_wrapper' );
 function zp_close_site_wrapper(){
-	echo '</div>';	
+	echo '</div>';
 }
 
 /*
- * To Top Link 
+ * To Top Link
  */
 add_action( 'genesis_after_footer','zp_add_top_link' );
 function zp_add_top_link(  ){
-	echo '<a href="#top" id="top-link"> &uarr; '. __( 'Top of Page','novo' ) .'</a>';
+	echo '<a href="#top" id="top-link"> &uarr; '. __( 'Top of Page','initlanesis' ) .'</a>';
 }
 
 /*
  * Add Menu in Sidebar when mobile view
  */
- 
+
 add_action( 'genesis_before_sidebar_widget_area', 'zp_mobile_menu' );
 
 /*function zp_mobile_menu(){
-	echo '<div id="close_sidebar" class="close-btn" ></div><section class="mobile_menu widget" style="display:none;"><div class="menu_trigger">'.__( 'Menu' , 'novo' ).'<span class="zp_menu_trigger_indicator">4</span></div>';
- 		wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> 'div','container_id' => 'nav' , 'menu_class'      => 'menu', 'after' => '<span class="zp_menu_indicator zp-icon close">/</span>' ) ); 
+	echo '<div id="close_sidebar" class="close-btn" ></div><section class="mobile_menu widget" style="display:none;"><div class="menu_trigger">'.__( 'Menu' , 'initlanesis' ).'<span class="zp_menu_trigger_indicator">4</span></div>';
+ 		wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> 'div','container_id' => 'nav' , 'menu_class'      => 'menu', 'after' => '<span class="zp_menu_indicator zp-icon close">/</span>' ) );
 	echo '</section>';
 }*/
 
 function zp_mobile_menu(){
 	echo '<div id="close_sidebar" class="close-btn" ></div><section class="mobile_menu widget" style="display:none;">';
- 		wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> 'div','container_id' => 'nav' , 'menu_class'      => 'menu' ) ); 
+ 		wp_nav_menu( array( 'theme_location' => 'primary', 'container'=> 'div','container_id' => 'nav' , 'menu_class'      => 'menu' ) );
 	echo '</section>';
 }
- 
+
 /*
  * Add sticky header
  */
- 
+
 add_action( 'genesis_before_header', 'genesis_do_subnav' , 5);
 
 /*
@@ -514,26 +514,26 @@ function zp_custom_sidebar_trigger(){
 }
 
 
-/* 
- * Add footer separator 
+/*
+ * Add footer separator
  */
 add_action( 'genesis_footer', 'zp_footer_sep', 5 );
 function zp_footer_sep(){
-		echo '<hr>';	
+		echo '<hr>';
 }
 
 /*
  * Add body class if color scheme is used
  */
- 
+
 add_filter( 'body_class', 'zp_add_colorscheme_body_class' );
 function zp_add_colorscheme_body_class( $classes ) {
-	
+
 	$color = strtolower(  genesis_get_option(  'zp_color_scheme' ,  ZP_SETTINGS_FIELD  )  );
 	if(  $color != 'default'  ){
 	   $classes[] = 'zp_color_scheme '.$color;
 	}
-	
+
    return $classes;
 }
 
