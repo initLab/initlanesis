@@ -1,0 +1,624 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Novo Genesis Child Theme\n"
+"POT-Creation-Date: 2013-12-18 15:25+0800\n"
+"PO-Revision-Date: 2013-12-18 15:25+0800\n"
+"Last-Translator: joemar aparecio <floroxmar@gmail.com>\n"
+"Language-Team: zigzagpress <joe@zigzagpress.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\update\\wp-content\\themes\\novo\n"
+
+#: C:\wamp\www\update\wp-content\themes\novo/404.php:35
+msgid "404 - Page Not Found!"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/404.php:36
+msgid ""
+"You're looking for a page that does not exist! Please try the navigations "
+"above.."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:241
+msgid "Read More"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:247
+msgid "Categories"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:247
+msgid "Tags"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:262
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:263
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:264
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:265
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:267
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:268
+msgid "Archives for "
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:266
+msgid "Search for "
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:269
+msgid "404"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:373
+msgid ""
+"This is the widget area at the bottom of the page right of footer credits."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:435
+#: C:\wamp\www\update\wp-content\themes\novo/include/shortcodes/shortcode.php:15
+msgid "Like this post"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:450
+msgid "You liked this post"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:479
+msgid "Top of Page"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/functions.php:489
+msgid "Menu"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/single-portfolio.php:76
+msgid ""
+"Sorry that seems to be an invalid <strong>YouTube</strong> URL. Please check "
+"it again."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/single-portfolio.php:88
+msgid ""
+"Sorry that seems to be an invalid <strong>Vimeo</strong> URL. Please check "
+"it again. Make sure there is a string of numbers at the end."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/single-portfolio.php:94
+msgid "Sorry that is an invalid YouTube or Vimeo URL."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_functions.php:51
+msgid "show all"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_functions.php:520
+msgid "No related projects."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_functions.php:811
+msgid "No Comments"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_functions.php:813
+msgid " Comments"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_functions.php:815
+msgid "1 Comment"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:14
+msgid "This is the welcome message section"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:23
+msgid "Related Portfolio"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:103
+msgid "Settings reset."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:105
+msgid "Settings saved."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:162
+msgid "Appearance Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:163
+msgid "Portfolio Settings "
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:164
+msgid "Footer Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:165
+msgid "Responsive Logo Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:182
+msgid "Select color scheme."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:216
+msgid "Custom CSS Code."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:226
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:366
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:408
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:450
+msgid "Upload Custom Logo."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:230
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:370
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:412
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:454
+msgid "Upload Logo"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:240
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:385
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:428
+msgid "Custom Logo Height in pixel/percentage."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:246
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:380
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:422
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:464
+msgid "Custom Logo Width in pixel/percentage."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:251
+msgid "Select Logo Position."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:266
+msgid "Upload Custom Favicon."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:270
+msgid "Upload Favicon"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:284
+msgid "This is the appearance settings."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:291
+msgid "Footer Text"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:295
+msgid "Enter your site copyright here."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:308
+msgid "Check to enable related portfolio in single portfolio page."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:314
+msgid "Related Portfolio Title"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:320
+msgid "Number of items in the portfolio page"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:323
+msgid "Number of items in the portfolio archive"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:329
+msgid "Portfolio Archive Columns:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:338
+msgid "Portfolio Animations:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:355
+msgid "This settings applies to portfolio."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:363
+msgid "600 Max Width Logo"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:391
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:433
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:475
+msgid "Select Background Position."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:406
+msgid "480 Max Width Logo"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:448
+msgid "320 Max Width Logo"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:469
+msgid "Custom Logo Height in pixel/percentage. "
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:502
+msgid "Insert Image!"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:564
+msgid "Novo Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:565
+msgid "Save Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:566
+msgid "Reset Settings"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/theme_settings.php:566
+msgid "Are you sure you want to reset?"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:35
+msgid "Video Type"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:35
+msgid "Select appropriate video type"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:36
+msgid "Video ID"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:36
+msgid "Enter video ID. Example: VdvEdMMtNMY"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:37
+msgid "Slide Button"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:37
+msgid "Enter Button Name"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:38
+msgid "Slide Link"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:38
+msgid "Put slide link here"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:46
+msgid "Define slide order. Ex. 1,2,3,4,..."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:54
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:189
+msgid "Title"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:55
+msgid "Slideshow"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:56
+msgid "Slide Order"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:57
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:195
+msgid "Date"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:69
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:219
+msgid "Unable to get author(s)"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:122
+msgid "Project Label"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:122
+msgid "Define project label"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:124
+msgid "Project Link"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:124
+msgid "Define project link"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:142
+msgid "Image 1"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:142
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:144
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:146
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:148
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:150
+msgid "Place here the full image path"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:144
+msgid "Image 2"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:146
+msgid "Image 3"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:148
+msgid "Image 4"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:150
+msgid "Image 5"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:168
+msgid "Youtube or Vimeo URL"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:168
+msgid ""
+"Place here the video url. Example video url: YOUTUBE: http://www.youtube.com/"
+"watch?v=Sv5iEK-IEzw and VIMEO: http://vimeo.com/7585127"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:170
+msgid "Embed Code"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:170
+msgid ""
+"If you are using anything else other than YouTube or Vimeo, paste the embed "
+"code here. This field will override anything from the above."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:191
+msgid "Portfolio Category"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:193
+msgid "Author"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:248
+msgid "Audio .mp3 URL"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:248
+msgid "The URL to the .mp3 audio file"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:249
+msgid "Audio .ogg, .oga URL"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:249
+msgid "The URL to the .oga, .ogg audio file"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:250
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:282
+msgid "Preview Image"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:250
+msgid "The preview image for this audio track"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:251
+msgid "Preview Image Height"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:251
+msgid "The height of the poster image. Example: 300"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:265
+msgid "Enter link.  E.g., http://www.yourlink.com"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:265
+msgid "Input your link. e.g., http://www.yourlink.com"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:279
+msgid "Video File (.m4v)"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:279
+msgid "The URL to the .m4v video file"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:280
+msgid "Video File (.ogv)"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:280
+msgid "The URL to the .ogv video file"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:281
+msgid "Video Height"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:281
+msgid "The video height (e.g. 500)."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:282
+msgid "The preview image for this video."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:283
+msgid "Embed Video"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/cpt/zp_cpt.php:283
+msgid ""
+"If you are using something other than self hosted video such as Youtube or "
+"Vimeo, paste the embed code here. Width is best at 600px with any height. "
+"This field will override the above."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:32
+msgid "A widget that addresss your contact information."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:35
+msgid "ZP Contact Widget"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:118
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:118
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-latest_portfolio.php:119
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:205
+msgid "Title:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:123
+msgid "Telephone:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:128
+msgid "Fax:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:133
+msgid "Email:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:138
+msgid "Address:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-address.php:143
+msgid "Skype:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:32
+msgid "A widget that displays your Flickr photos."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:38
+msgid "ZP Flickr Photos"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:124
+msgid "Flickr ID:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:130
+msgid "Number of Photos:"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:140
+msgid "Type (user or group):"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-flickr.php:149
+msgid "Display (random or latest):"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-latest_portfolio.php:26
+msgid "A widget that displays your latest portfolio photos."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-latest_portfolio.php:29
+msgid "ZP Latest Portfolio"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-latest_portfolio.php:125
+msgid "Number of Posts"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:85
+msgid "Dribble URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:93
+msgid "Behance URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:100
+msgid "Facebook URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:107
+msgid "Google+ URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:114
+msgid "Linkedin URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:121
+msgid "DeviantART URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:128
+msgid "Twitter URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:135
+msgid "Vimeo URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:142
+msgid "Pinterest URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:149
+msgid "Flickr URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:156
+msgid "Tumblr URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:163
+msgid "YouTube URI"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:174
+msgid "Displays select social icons."
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:183
+msgid "ZP Social Icons"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:210
+msgid "Alignment"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:212
+msgid "Align Left"
+msgstr ""
+
+#: C:\wamp\www\update\wp-content\themes\novo/include/widgets/widget-social_icons.php:213
+msgid "Align Right"
+msgstr ""

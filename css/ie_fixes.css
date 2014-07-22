@@ -1,0 +1,128 @@
+/* IE9 CSS   */
+.js-nav #sidebar_container .sidebar-primary {
+ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.js-nav .site-header,  .js-nav .site-inner,  .js-nav .site-footer,  .js-nav .footer-widgets {
+	-webkit-transform: translate(300px, 0);
+	-moz-transform: translate(300px, 0);
+	-ms-transform: translate(300px, 0);
+	-o-transform: translate(300px, 0);
+	transform: translate(300px, 0);
+	-webkit-transition: -webkit-transform 500ms ease;
+	-moz-transition: -moz-transform 500ms ease;
+	-o-transition: -o-transform 500ms ease;
+	transition: transform 500ms ease;
+}
+.js-nav #site-wrapper {
+	-webkit-transform: translate3d(-380px, 0, 0) scale3d(1, 1, 1);
+	-moz-transform: translate3d(-380px, 0, 0) scale3d(1, 1, 1);
+	-ms-transform: translate3d(-380px, 0, 0) scale3d(1, 1, 1);
+	-o-transform: translate3d(-380px, 0, 0) scale3d(1, 1, 1);
+	transform: translate3d(-380px, 0, 0) scale3d(1, 1, 1);
+}
+
+.js-nav #site-wrapper {
+	right: 380px;
+
+}
+.js-nav #sidebar_container{
+	right:0;
+	overflow-y: scroll;
+}
+.js-nav .sidebar{
+	padding-left: 20px;	
+}
+/* quote */
+.format-quote h2::after,
+.format-quote h2::before{
+	display:none;
+}
+
+@media only screen and (max-width: 1680px) {
+	.js-nav .site-header,
+	.js-nav .site-inner,
+	.js-nav .site-footer,
+	.js-nav .footer-widgets{
+		-webkit-transform: translate(180px, 0);
+		-moz-transform: translate(180px, 0);
+		-ms-transform: translate(180px, 0);
+		-o-transform: translate(180px, 0);
+		transform: translate(180px, 0);
+		-webkit-transition: -webkit-transform 500ms ease;
+		-moz-transition: -moz-transform 500ms ease;
+		-o-transition: -o-transform 500ms ease;
+		transition: transform 500ms ease;
+	}
+}
+@media only screen and (max-width: 1440px) {
+	.js-nav .site-header,
+	.js-nav .site-inner,
+	.js-nav .site-footer,
+	.js-nav .footer-widgets{
+		-webkit-transform: translate(100px, 0);
+		-moz-transform: translate(100px, 0);
+		-ms-transform: translate(100px, 0);
+		-o-transform: translate(100px, 0);
+		transform: translate(100px, 0);
+		-webkit-transition: -webkit-transform 500ms ease;
+		-moz-transition: -moz-transform 500ms ease;
+		-o-transition: -o-transform 500ms ease;
+		transition: transform 500ms ease;
+	}
+}
+@media only screen and (max-width: 1366px) {
+	.js-nav .site-header,
+	.js-nav .site-inner,
+	.js-nav .site-footer,
+	.js-nav .footer-widgets{
+		-webkit-transform: translate(0, 0);
+		-moz-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		-webkit-transition: -webkit-transform 500ms ease;
+		-moz-transition: -moz-transform 500ms ease;
+		-o-transition: -o-transform 500ms ease;
+		transition: transform 500ms ease;
+	}
+}
+@media only screen and (max-width: 1280px) {
+	.js-nav .site-header,
+	.js-nav .site-inner,
+	.js-nav .site-footer,
+	.js-nav .footer-widgets{
+		-webkit-transform: translate(0, 0);
+		-moz-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		-webkit-transition: -webkit-transform 500ms ease;
+		-moz-transition: -moz-transform 500ms ease;
+		-o-transition: -o-transform 500ms ease;
+		transition: transform 500ms ease;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+.js-nav .site-header,
+.js-nav .site-inner,
+.js-nav .site-footer,
+.js-nav .footer-widgets{
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+	-webkit-transition: -webkit-transform 500ms ease;
+	-moz-transition: -moz-transform 500ms ease;
+	-o-transition: -o-transform 500ms ease;
+	transition: transform 500ms ease;
+}
+	
+}
