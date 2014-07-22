@@ -1,0 +1,202 @@
+/* Custom CSS */
+
+#site-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+ #sidebar_container {
+  z-index: 200;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+ #sidebar_container.close-btn {
+  display: none;
+}
+
+.sidebar_bg{
+	background: url("../images/noise.png") repeat scroll center center #312C2D;
+	height: 439px;
+	color: #736D6D;
+	position: absolute;
+	text-shadow: none;
+	width: 111%;
+	top: 0;  
+}
+
+.sidebar_bg:after {
+	background: url("../images/header.png") repeat scroll center center rgba(0, 0, 0, 0);
+	bottom: -9px;
+	content: "";
+	display: block;
+	height: 9px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}  
+
+.nav-btn {
+	display: block;
+	width: 2.625em;
+	height: 2.25em;
+	float: right;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background: url("../images/nav-icon.svg") center center no-repeat;
+	background-size: 1.875em 1.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin-top: 60px;
+}
+.no-svg .nav-btn {
+  background-image: url("../images/nav-icon.png");
+}
+.nav-btn:hover, .nav-btn:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.close-btn {
+  display: block;
+  width: 2.625em;
+  height: 2.25em;
+  float: right;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: #333333 url("../images/close-btn.svg") center center no-repeat;
+  background-size: 1.875em 1.875em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.no-svg .close-btn {
+  background-image: url("../images/close-btn.png");
+}
+.close-btn:focus, .close-btn:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+ #sidebar_container {
+    position: absolute;
+    top: 0;
+    padding-top: 5.25em;
+  }
+  #sidebar_container:not(:target) {
+    z-index: 1;
+    height: 0;
+  }
+  #sidebar_container:target .close-btn {
+    display: block;
+  }
+  #sidebar_container .close-btn {
+    position: absolute;
+    top: -3.75em;
+    right: 1.875em;
+  }
+ 
+  .js-ready #sidebar_container {
+    height: 100%;
+    width: 360px;
+  }
+
+  .js-ready #sidebar_container .close-btn {
+    display: block;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+  }
+  .js-ready #sidebar_container .close-btn:focus, .js-ready #sidebar_container .close-btn:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+  .js-ready #sidebar_container {
+    right: -360px;
+  }
+  .js-ready #site-wrapper {
+    right: 0;
+  }
+
+  .js-nav #site-wrapper {
+    right: 360px;
+  }
+
+  .csstransforms3d.csstransitions.js-ready #sidebar_container {
+    right: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .csstransforms3d.csstransitions.js-ready #site-wrapper {
+    right: 0 !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .csstransforms3d.csstransitions.js-nav #site-wrapper {
+    -webkit-transform: translate3d(-360px, 0, 0) scale3d(1, 1, 1);
+    -moz-transform: translate3d(-360px, 0, 0) scale3d(1, 1, 1);
+    -ms-transform: translate3d(-360px, 0, 0) scale3d(1, 1, 1);
+    -o-transform: translate3d(-360px, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(-360px, 0, 0) scale3d(1, 1, 1);
+  }
+
+  .csstransforms3d.csstransitions.js-ready #sidebar_container .sidebar-primary {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 300ms 100ms, -webkit-transform 500ms ease;
+    -webkit-transition-delay: ease, 0s;
+    -moz-transition: opacity 300ms 100ms ease, -moz-transform 500ms ease;
+    -o-transition: opacity 300ms 100ms ease, -o-transform 500ms ease;
+    transition: opacity 300ms 100ms ease, transform 500ms ease;
+    -webkit-transform: translate3d(-360px, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -moz-transform: translate3d(-360px, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -ms-transform: translate3d(-360px, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -o-transform: translate3d(-360px, 0, 0) scale3d(0.9, 0.9, 0.9);
+    transform: translate3d(-360px, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -webkit-transform-origin: -50% 0%;
+    -moz-transform-origin: -50% 0%;
+    -ms-transform-origin: -50% 0%;
+    -o-transform-origin: -50% 0%;
+    transform-origin: -50% 0%;
+  }
+
+  .csstransforms3d.csstransitions.js-nav #sidebar_container .sidebar-primary {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+ 
