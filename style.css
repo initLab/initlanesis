@@ -123,7 +123,7 @@ html {
 	font-size: 62.5%; /* 10px browser default */
 }
 body {
-	background: url( images/body_bgrd.png ) #F7F7FA;
+	background: url( images/grid.png ) #F7F7FA;
 	color: #515E6C;
 	font: 400 16px/1.625 'Roboto', sans-serif;
 	font-size: 1.6rem;
