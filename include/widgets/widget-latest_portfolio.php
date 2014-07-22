@@ -19,26 +19,26 @@ class zp_latest_portfolio_widget extends WP_Widget {
 	/* ---------------------------- */
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
-	
+
 	function ZP_LATEST_PORTFOLIO_Widget(  ) {
-	
+
 		/* Widget settings. */
-		$widget_ops = array(  'classname' => 'zp_latest_portfolio_widget', 'description' => __( 'A widget that displays your latest portfolio photos.', 'novo' )  );
+		$widget_ops = array(  'classname' => 'zp_latest_portfolio_widget', 'description' => __( 'A widget that displays your latest portfolio photos.', 'initlanesis' )  );
 
 		/* Create the widget. */
-		$this->WP_Widget(  'zp_latest_portfolio_widget', __( 'ZP Latest Portfolio', 'novo' ), $widget_ops  );
-		
+		$this->WP_Widget(  'zp_latest_portfolio_widget', __( 'ZP Latest Portfolio', 'initlanesis' ), $widget_ops  );
+
 	}
 
 	/* ---------------------------- */
 	/* ------- Display Widget -------- */
 	/* ---------------------------- */
-	
+
 	function widget(  $args, $instance  ) {
 		extract(  $args  );
 
 		global $post;
-		
+
 		/* Our variables from the widget settings. */
 		$title = apply_filters( 'widget_title', $instance['title']  );
 		$portfoliocount = $instance['portfoliocount'];
@@ -51,19 +51,19 @@ class zp_latest_portfolio_widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
 
 		/* Display latest portfolio */
-			$args= array( 
+			$args= array(
 				  'posts_per_page' => $portfoliocount,
 				   'orderby' => 'rand',
 				   'post_type' => 'portfolio',
-				   'post_status' => 'publish'		
-			);				
+				   'post_status' => 'publish'
+			);
 			query_posts( $args );
 			?>
             <ul>
-            <?php 
-			if(  have_posts(  )  ) {												
+            <?php
+			if(  have_posts(  )  ) {
 				while (  have_posts(  )  ) {
-					the_post(  ); 
+					the_post(  );
 					?>
 					<li>
                     	<a href="<?php echo the_permalink();?>"><?php the_post_thumbnail('latest_portfolio_widget');  ?></a>
@@ -82,7 +82,7 @@ class zp_latest_portfolio_widget extends WP_Widget {
 	/* ---------------------------- */
 	/* ------- Update Widget -------- */
 	/* ---------------------------- */
-	
+
 	function update(  $new_instance, $old_instance  ) {
 		$instance = $old_instance;
 
@@ -94,21 +94,21 @@ class zp_latest_portfolio_widget extends WP_Widget {
 
 		return $instance;
 	}
-	
+
 	/* ---------------------------- */
 	/* ------- Widget Settings ------- */
 	/* ---------------------------- */
-	
+
 	/**
 	 * Displays the widget settings controls on the widget panel.
 	 * Make use of the get_field_id(  ) and get_field_name(  ) function
 	 * when creating your form elements. This handles the confusing stuff.
 	 */
-	 
+
 	function form(  $instance  ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 
+		$defaults = array(
 		'title' => 'Latest Portfolio Widget',
 		'portfoliocount' => '9'
 		 );
@@ -116,17 +116,17 @@ class zp_latest_portfolio_widget extends WP_Widget {
 
 		<!-- Widget Title: Text Input -->
 		<p>
-			<label for="<?php echo $this->get_field_id(  'title'  ); ?>"><?php _e( 'Title:', 'novo' ) ?></label>
+			<label for="<?php echo $this->get_field_id(  'title'  ); ?>"><?php _e( 'Title:', 'initlanesis' ) ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id(  'title'  ); ?>" name="<?php echo $this->get_field_name(  'title'  ); ?>" value="<?php echo $instance['title']; ?>" />
 		</p>
 
 		<!-- Flickr ID: Text Input -->
 		<p>
-			<label for="<?php echo $this->get_field_id(  'portfoliocount'  ); ?>"><?php _e( 'Number of Posts', 'novo' ) ?> </label>
+			<label for="<?php echo $this->get_field_id(  'portfoliocount'  ); ?>"><?php _e( 'Number of Posts', 'initlanesis' ) ?> </label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id(  'portfoliocount'  ); ?>" name="<?php echo $this->get_field_name(  'portfoliocount'  ); ?>" value="<?php echo $instance['portfoliocount']; ?>" />
 		</p>
-		
-		
+
+
 	<?php
 	}
 }

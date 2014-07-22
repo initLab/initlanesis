@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* This file contains all the shortcodes and 
+* This file contains all the shortcodes and
 * TinyMCE formatting buttons functionality.
 *
 */
@@ -12,13 +12,13 @@
 
 function zp_post_like( $atts, $content = null ) {
 	extract( shortcode_atts( array(
-		'text' => __( 'Like this post', 'novo' ),
+		'text' => __( 'Like this post', 'initlanesis' ),
 	 ), $atts ) );
 	 global $post;
 	$likes = get_post_meta($post->ID,'zp_like',true);
-	$like = ( $likes ) ? $likes: '0';	
-	
-	$output = '<span class="post_like"><span class="likes text-right '.$post->ID.'"><span class="icon-heart '.$post->ID.'">R</span><span class= "textLike">'.$text.'</span><span class="likes_value"><em>( '.$like.')</em></span></span></span>';	
+	$like = ( $likes ) ? $likes: '0';
+
+	$output = '<span class="post_like"><span class="likes text-right '.$post->ID.'"><span class="icon-heart '.$post->ID.'">R</span><span class= "textLike">'.$text.'</span><span class="likes_value"><em>( '.$like.')</em></span></span></span>';
 	return  $output;
 }
 
@@ -38,16 +38,16 @@ function zp_show_tabs( $atts, $content = null ) {
 	foreach( $titlearr as $title ){
 		$output.='<li class="w3"><a href="#">'.$title.'</a></li>';
 	}
-	
+
 	$output.='</ul><div class="panes">'.do_shortcode( $content ).'</div></div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
-	
+
 }
 
 add_shortcode( 'tabs', 'zp_show_tabs' );
@@ -66,23 +66,23 @@ function zp_toggle(  $atts, $content = null  ){
 	extract(  shortcode_atts(  array(
 		'title'=> ''
 	), $atts ) );
-	
+
 	$output = '';
 	$output .= '<div class="toggle-unit clearfix">';
-	
+
 	if(  $title  ) {
 		$output .= '<h4>' . $title . '</h4>';
 	}
-	
+
 	$output .= do_shortcode(  $content  ) ;
-	
+
 	$output .= '</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 
@@ -93,13 +93,13 @@ function zp_toggleitem(  $atts, $content = null  ){
 	extract(  shortcode_atts(  array(
 		'title'=> ''
 	), $atts ) );
-	
+
 	$output = '<div class="toggle-wrap">';
 	$output .= '<span class="trigger"><span class="toogle_image"></span><a href="#">' . $title . '</a></span>';
 	$output .= '<div class="toggle-container">';
 	$output .= do_shortcode (  $content  ) ;
 	$output .= '</div></div>';
-	
+
 	return $output;
 }
 
@@ -113,20 +113,20 @@ function zp_accordion(  $atts, $content = null  ){
 	extract(  shortcode_atts(  array(
 		'title'=> ''
 	), $atts ) );
-	
+
 	$output = '<div class="accordion-unit clearfix">';
-	
+
 	if (  $title  ) {
 		$output .= '<h4>' . $title . '</h4>';
 	}
-	
+
 	$output .= do_shortcode (  $content  );
 	$output .= '</div>';
-	
+
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 
@@ -137,13 +137,13 @@ function zp_accordionitem(  $atts, $content = null  ){
 	extract(  shortcode_atts(  array(
 		'title'=> ''
 	), $atts ) );
-	
+
 	$output = '<div class="accordion_container"><span class="trigger-button"><span class="accordion_image"></span><span>' . $title . '</span></span>';
 	$output .= '<div class="accordion">';
-	
+
 	$output .= do_shortcode (  $content  ) ;
 	$output .= '</div></div>';
-	
+
 	return $output;
 }
 
@@ -165,7 +165,7 @@ function zp_servicebox(  $atts, $content = null  ){
 		'rounded' => '',
 		'color' => '',
 	), $atts ) );
-	
+
 	if(  $last == 'true' ) {
 		$last_str = " last-column";
 		$clear = '<div class="clearfix"></div>';
@@ -173,27 +173,27 @@ function zp_servicebox(  $atts, $content = null  ){
 		$last_str="";
 		$clear = '';
 	}
-	
+
 	if( $color == 'grey')
 		$color = '';
-		
+
 	if( $rounded == 'false')
 		$rounded = '';
-	else 
+	else
 		$rounded = 'rounded';
-		
+
 	$btn='';
-	
+
 	if( $name != ''){
 		$btn = '<p><a href="'. $link . '" class=" button ' .$rounded .' '. $btnsize .'-btn '. $color . '" >' .   $name. '</a></p>';
 	}
-	
+
 	$output ='';
 	$output .= '<div class="'.$size.' special-services-box'. $last_str .'">';
 	$output .= '<div class="box-wrapper"><div class="zp-icon-effect" ><a href="'.$link.'" class="zp-icon">'.$icon.'</a></div>';
 	$output .= '<h4>'. $title . '</h4>';
 	$output .= '<p>'. do_shortcode( $content  ). '</p>'.$btn.'</div></div>' ;
-	
+
 	$Old     = array( '<br />', '<br>');
 	$New     = array( '','');
 	$output = str_replace( $Old, $New, $output );
@@ -223,12 +223,12 @@ function zp_buttons_shortcode(  $atts, $content = null  ) {
 		'link' => '',
 		'rounded' => ''
 	), $atts ) );
-	
+
 	$output = '';
-	
+
 	if( $color == 'default' )
 		$color = '';
-	
+
 	if (  $size == 'small'  ) {
 		$size = 'small-btn ';
 	}elseif (  $size == 'normal'  ) {
@@ -238,13 +238,13 @@ function zp_buttons_shortcode(  $atts, $content = null  ) {
 	}else {
 		$size = '';
 	}
-	
+
 	if (  $rounded == 'true'  ){
 		$rounded = 'rounded ';
 	}
-	
+
 	$output .= '<a href="'. $link . '" class=" button ' .$rounded .' '. $size . $color . '" >' . do_shortcode (  $content  ) . '</a>';
-	
+
 	return $output;
 }
 
@@ -268,7 +268,7 @@ function zp_team(  $atts, $content = null  ){
 		'linkedin' => '',
 		'gmail' => ''
 	), $atts ) );
-	
+
 	if(  $last == 'true' ) {
 		$last_str = " last-column";
 		$clear = '<div class="clearfix"></div>';
@@ -276,9 +276,9 @@ function zp_team(  $atts, $content = null  ){
 		$last_str="";
 		$clear = '';
 	}
-	
+
 	$team_link='';
-	
+
 	if(  $facebook != ''  )
 		$team_link .= '<a class="t_facebook hastip" title="facebook" href="'.$facebook.'">F</a>';
 	if(  $twitter != ''  )
@@ -290,8 +290,8 @@ function zp_team(  $atts, $content = null  ){
 	if(  $youtube != ''  )
 		$team_link .= '<a class="t_youtube hastip" title="youtube" href="'.$youtube.'">X</a>';
 	if(  $linkedin != ''  )
-		$team_link .= '<a class="t_linkedin hastip" title="linkedin" href="'.$linkedin.'">I</a>';		
-		
+		$team_link .= '<a class="t_linkedin hastip" title="linkedin" href="'.$linkedin.'">I</a>';
+
 	$output ='';
 	$output .= '<div class="'.$size.' team'. $last_str .'">';
 	$output .= '<div class="box-wrapper">';
@@ -299,7 +299,7 @@ function zp_team(  $atts, $content = null  ){
 	$output .= '<img src="'.$icon.'"  alt="" /></div>';
 	$output .= '<h4>'. $name . '</h4><h5>'. $title . '</h5><p>'. $content . '</p>';
 	$output .= '<span class="team_socials">'. $team_link . '</span></div></div>';
-	
+
 	return $output.$clear;
 
 }
@@ -332,18 +332,18 @@ function zp_slider(  $atts, $content = null  ){
 		'controlnav' => '',
 		'order' => '',
 	), $atts ) );
-	
+
 	global $post;
-	
+
 	wp_enqueue_script(  'jquery_flexslider_js'  );
-	
-	
+
+
 	$output ='';
-	
+
 	$output .= '<div class="slider_shortcode" style="height: '.$height.'; width:'.$width.';"><div class="flexslider '.$name.'"><ul class="slides">';
-	
+
 	$recent = new WP_Query(array('post_type'=> 'slide', 'showposts' => '-1','orderby' => 'meta_value_num', 'meta_key'=>'slide_number_value','order'=>$order, 'slideshow' => $slideshow ));
-	
+
 	while($recent->have_posts()) : $recent->the_post();
 		$images = wp_get_attachment_url(  get_post_thumbnail_id(  $post->ID  )  );
 		$captions = get_the_title('',FALSE);
@@ -352,7 +352,7 @@ function zp_slider(  $atts, $content = null  ){
 		$video_id = get_post_meta($post->ID, 'video_id_value', true);
 		$link  = get_post_meta($post->ID, 'slider_link_value', true);
 		$button  = get_post_meta($post->ID, 'slider_button_value', true);
-		
+
 
 		if($type == "youtube"){
 			$output .= '<li><iframe width="'.$width.'" height="'.$height.'" src="http://www.youtube.com/embed/'.$video_id.'?wmode=opaque" frameborder="0" allowfullscreen></iframe></li>';
@@ -360,9 +360,9 @@ function zp_slider(  $atts, $content = null  ){
 			$output .= '<li><iframe src="http://player.vimeo.com/video/'.$video_id.'?portrait=0&amp;color=ffffff" width="'.$width.'" height="'.$height.';" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe></li>';
 		}else{
 			$output.= '<li style="background-image: url('.$images.'); height: '.$height.'">';
-			
+
 				$output .= '<div class="li-wrap">';
-				
+
 				if( $captions ){
 					$output .= '<h3>'.$captions.'</h3>';
 					$output .= '<div class="clearfix"></div>';
@@ -373,23 +373,23 @@ function zp_slider(  $atts, $content = null  ){
 				if( $button ) {
 					$output .= '<p><a href="'.$link.'">'.$button.'</a></p>';
 				}
-				
+
 				$output .=  '</div>';
 
 
 			$output .= '</li>';
 		}
-		
+
 		endwhile;
 		wp_reset_query();
 
 	    $output .= '</ul> </div><script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function(e){function t(t){var n=e(".'.$name.' .slides li").not(".clone").eq(t.animatingTo),r=e(".'.$name.' .slides li").not(n);r.find("h3").animate({"margin-top":0,opacity:0},1e3);r.find(".excerpt").animate({left:"-680px",opacity:0},1e3);n.find("h3").animate({"margin-top":"20%",opacity:1},1e3);n.find(".excerpt").animate({left:0,opacity:1},1e3)}e(".'.$name.'").flexslider({animation:"'.$animation.'",slideDirection:"horizontal",slideshowSpeed:6e3,animationDuration:7e3,directionNav:"'.$directionnav.'",controlNav:"'.$controlnav.'",pauseOnAction:true,pauseOnHover:true,animationLoop:true,start:t,before:t});e(".'.$name.'").hover(function(){e(this).children("ul.flex-direction-nav").css({display:"block"})},function(){e(this).children("ul.flex-direction-nav").css({display:"none"})})})</script></div>';
-		
+
 		//removing extra <br>
 		$Old     = array( '<br />', '<br>' );
 		$New     = array( '','' );
 		$output = str_replace( $Old, $New, $output );
-		
+
 		return $output;
 }
 
@@ -403,9 +403,9 @@ function zp_infobox(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 		'type' => ''
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="infobox_container"><div class="'.$type.'">'.$content.'</div></div><div class="clearfix"></div>';
 	return $output;
 }
@@ -420,16 +420,16 @@ function zp_liststyles(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 		'style' => ''
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<ul class="bullet_'.$style.' imglist">'.do_shortcode( $content ).'</ul>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'list', 'zp_liststyles'  );
@@ -447,16 +447,16 @@ function zp_column_wrapper(  $atts, $content = null  ) {
 		'num' => '',
 		'last' => ''
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="columns-wrapper">'.do_shortcode( $content ).'</div><div class="clearfix"></div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 
@@ -468,11 +468,11 @@ add_shortcode(  'col_wrapper', 'zp_column_wrapper'  );
 function zp_2columns(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="one-half columns">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
@@ -484,16 +484,16 @@ add_shortcode(  'col2', 'zp_2columns'  );
 function zp_2columns_last(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="one-half columns nomargin">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'col2_last', 'zp_2columns_last'  );
@@ -505,15 +505,15 @@ add_shortcode(  'col2_last', 'zp_2columns_last'  );
 function zp_3columns(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
 	$output .= '<div class="one-third columns">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'col3', 'zp_3columns'  );
@@ -521,16 +521,16 @@ add_shortcode(  'col3', 'zp_3columns'  );
 function zp_3columns_last(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="one-third columns nomargin">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'col3_last', 'zp_3columns_last'  );
@@ -541,17 +541,17 @@ add_shortcode(  'col3_last', 'zp_3columns_last'  );
 function zp_4columns(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
-	
-	
+
+
 	$output .= '<div class="one-fourth columns">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 
@@ -560,17 +560,17 @@ add_shortcode(  'col4', 'zp_4columns'  );
 function zp_4columns_last(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<div class="one-fourth columns nomargin">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
-	
+
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 
@@ -584,17 +584,17 @@ function zp_twothird_columns(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 		'last' => ''
 	), $atts ) );
-	
+
 	$last = ($last == 'true' ) ? "nomargin" : ' ';
-	
+
 	$output='';
 	$output .= '<div class="two-third columns '.$last.'">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'col2_3', 'zp_twothird_columns'  );
@@ -607,18 +607,18 @@ function zp_threefourth_columns(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 		'last' => ''
 	), $atts ) );
-	
+
 	$last = ($last == 'true' ) ? "nomargin" : ' ';
-	
+
 	$output='';
-	
+
 	$output .= '<div class="three-fourth columns '.$last.'">'.do_shortcode( $content ).'</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'col3_4', 'zp_threefourth_columns'  );
@@ -630,15 +630,15 @@ add_shortcode(  'col3_4', 'zp_threefourth_columns'  );
 function zp_dropcaps(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
 	$output .= '<span class="drop-caps">'.$content.'</span>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'dropcaps', 'zp_dropcaps'  );
@@ -653,17 +653,17 @@ function zp_portfolio(  $atts, $content = null  ) {
 		'filter' => '',
 		'effect' => ''
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$filter = ($filter == "true" )? true:false;
-	
+
 	$output = zp_portfolio_shortcode( $items, $type, $effect );
 
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'portfolio', 'zp_portfolio'  );
@@ -677,14 +677,14 @@ function zp_recent_blog(  $atts, $content = null  ) {
 		'items' => '',
 		'category' => '',
 	), $atts ) );
-	
+
 	$output='';
 	$output = zp_post_shortcode( $columns, $items, $category);
-	
+
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'recent_blog', 'zp_recent_blog'  );
@@ -701,18 +701,18 @@ function zp_calltoaction(  $atts, $content = null  ) {
 		'btnsize' => '',
 		'color' => '',
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$rounded = ( $rounded == 'true' )? 'rounded' : '';
-	
+
 	$output .= '<div class="call_to_action_box">'. do_shortcode( $content ).'<p><a class=" cta_button button ' .$rounded .' '. $btnsize .'-btn '. $color . '" href="'.$link.'">'.$button_label.'</a></p></div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'call_to_action', 'zp_calltoaction'  );
@@ -724,10 +724,10 @@ add_shortcode(  'call_to_action', 'zp_calltoaction'  );
 function zp_hr(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	$output='';
 	$output = '<hr />';
-	
+
 	return $output;
 }
 add_shortcode(  'hr', 'zp_hr'  );
@@ -740,7 +740,7 @@ function zp_testimonial(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 		'size' => ''
 	), $atts ) );
-	
+
 	wp_enqueue_script(  'jquery_cycle'  );?>
 
 	<script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function(e){
@@ -750,18 +750,18 @@ function zp_testimonial(  $atts, $content = null  ) {
 		});
 	});
     </script>
-	
+
 	<?php
-    
+
 	$output='';
-	
+
 	$output = '<div class="'.$size.' testimonial"><div class="testimonial_container">'.do_shortcode( $content ).'</div></div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'testimonial', 'zp_testimonial'  );
@@ -772,16 +772,16 @@ function zp_testim_pane(  $atts, $content = null  ) {
 		'position' => '',
 		'icon' => ''
 	), $atts ) );
-	
+
 	if(  $icon == '' )
 		$icon = get_stylesheet_directory_uri().'/include/shortcodes/shortcode_icons/ico-user.png';
-	
+
 	$output = '';
 	$output .= '<div>';
 	$output .= '<div class="testimonial_content"><p>'.$content.'</p></div>';
 	$output .= '<div class="signature"><span class="zp-icon">f</span><span class="testi_name">'.$name.'</span> '.$position.'</div>';
 	$output .= '</div>';
-	
+
 	return $output;
 }
 add_shortcode(  'testi_pane', 'zp_testim_pane'  );
@@ -793,7 +793,7 @@ add_shortcode(  'testi_pane', 'zp_testim_pane'  );
 function zp_client(  $atts, $content = null  ) {
 	extract(  shortcode_atts(  array(
 	), $atts ) );
-	
+
 	wp_enqueue_script(  'jquery_carouFredSel'   );
 	wp_enqueue_script(  'jquery_mousewheel'  );
 	wp_enqueue_script(  'jquery_touchswipe' );
@@ -816,14 +816,14 @@ function zp_client(  $atts, $content = null  ) {
 	$output='';
 	$output .= '<div class="client_carousel">';
 	$output .= '<div class="client_container">'.do_shortcode( $content ).'</div>';
-	
+
 	$output .= '</div>';
-	
+
 	//removing extra <br>
 	$Old     = array( '<br />', '<br>' );
 	$New     = array( '','' );
 	$output = str_replace( $Old, $New, $output );
-	
+
 	return $output;
 }
 add_shortcode(  'client', 'zp_client'  );
@@ -836,11 +836,11 @@ function zp_client_item(  $atts, $content = null  ) {
 		'width' => '',
 		'height' => ''
 	), $atts ) );
-	
+
 	$output='';
-	
+
 	$output .= '<a href="'.$link.'"  title="'.$name.'"><img src="'.$image.'"   alt="'.$name.'" width="'.$width.'" height="'.$height.'" /></a>';
-	
+
 	return $output;
 }
 add_shortcode(  'client_item', 'zp_client_item'  );
@@ -869,14 +869,14 @@ add_action( 'init', 'add_buttons' );
 */
 function register_buttons( $buttons ) {
 	global $shortcode_button;
-	
+
 	array_push( $buttons, implode( ',',$shortcode_button ) );
 	return $buttons;
 }
 
 function register_buttons_2( $buttons ) {
 	global $shortcode_button2;
-	
+
 	array_push( $buttons, implode( ',',$shortcode_button2 ) );
 	return $buttons;
 }
@@ -889,20 +889,20 @@ function register_buttons_2( $buttons ) {
 if( !function_exists('add_btn_tinymce_plugin') ){
 	function add_btn_tinymce_plugin( $plugin_array ) {
 		global $shortcode_button;
-		
+
 		foreach( $shortcode_button as $btn ){
 			$plugin_array[$btn] = get_stylesheet_directory_uri(  ).'/include/shortcodes/editor-plugin.js';
 		}
-		
+
 		return $plugin_array;
 	}
 }
 
 if( !function_exists('add_btn_tinymce_plugin2') ){
-	
+
 	function add_btn_tinymce_plugin2( $plugin_array ) {
 		global $shortcode_button2;
-		
+
 		foreach( $shortcode_button2 as $btn ){
 			$plugin_array[$btn] = get_stylesheet_directory_uri(  ).'/include/shortcodes/editor-plugin.js';
 		}

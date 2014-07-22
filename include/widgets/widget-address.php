@@ -1,7 +1,7 @@
 <?php
 /*----------------------------------------
 *
-* 	Address Widget 	
+* 	Address Widget
 *
 -----------------------------------------*/
 
@@ -25,20 +25,20 @@ class zp_contact_widget extends WP_Widget {
 	/* ---------------------------- */
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
-	
+
 	function ZP_CONTACT_Widget() {
-	
+
 		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'zp_contact_widget', 'description' => __('A widget that addresss your contact information.', 'novo') );
+		$widget_ops = array( 'classname' => 'zp_contact_widget', 'description' => __('A widget that addresss your contact information.', 'initlanesis') );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'zp_contact_widget', __('ZP Contact Widget', 'novo'), $widget_ops );
+		$this->WP_Widget( 'zp_contact_widget', __('ZP Contact Widget', 'initlanesis'), $widget_ops );
 	}
 
 	/* ---------------------------- */
 	/* ------- Display Widget -------- */
 	/* ---------------------------- */
-	
+
 	function widget( $args, $instance ) {
 		extract( $args );
 
@@ -62,9 +62,9 @@ class zp_contact_widget extends WP_Widget {
 			<?php if( $telephone ) {?><p class="highlight"><span class="phone"><?php echo $telephone; ?> </span></p><?php } ?>
             <?php if( $fax ) {?><p class="highlight"><span class="fax"> <?php echo $fax; ?></span></p><?php } ?>
            	<?php if( $email ) {?><p class="highlight"><span class="email"> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></p><?php } ?>
-            <?php if( $address ) {?><p class="highlight"><span class="mail"><?php echo $address; ?></span></p>  <?php } ?>   
-             <?php if( $skype ) {?><p class="highlight"><span class="skype"><?php echo $skype; ?></span></p>  <?php } ?> 
-           
+            <?php if( $address ) {?><p class="highlight"><span class="mail"><?php echo $address; ?></span></p>  <?php } ?>
+             <?php if( $skype ) {?><p class="highlight"><span class="skype"><?php echo $skype; ?></span></p>  <?php } ?>
+
 		<?php
 
 		/* After widget (defined by themes). */
@@ -74,7 +74,7 @@ class zp_contact_widget extends WP_Widget {
 	/* ---------------------------- */
 	/* ------- Update Widget -------- */
 	/* ---------------------------- */
-	
+
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
@@ -90,17 +90,17 @@ class zp_contact_widget extends WP_Widget {
 
 		return $instance;
 	}
-	
+
 	/* ---------------------------- */
 	/* ------- Widget Settings ------- */
 	/* ---------------------------- */
-	
+
 	/**
 	 * Displays the widget settings controls on the widget panel.
 	 * Make use of the get_field_id() and get_field_name() function
 	 * when creating your form elements. This handles the confusing stuff.
 	 */
-	 
+
 	function form( $instance ) {
 
 		/* Set up some default widget settings. */
@@ -115,35 +115,35 @@ class zp_contact_widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'novo') ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'initlanesis') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'telephone' ); ?>"><?php _e('Telephone:', 'novo') ?> </label>
+			<label for="<?php echo $this->get_field_id( 'telephone' ); ?>"><?php _e('Telephone:', 'initlanesis') ?> </label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'telephone' ); ?>" name="<?php echo $this->get_field_name( 'telephone' ); ?>" value="<?php echo $instance['telephone']; ?>" />
 		</p>
-		
+
 		<p>
-			<label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e('Fax:', 'novo') ?></label>
+			<label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e('Fax:', 'initlanesis') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" value="<?php echo $instance['fax']; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e('Email:', 'novo') ?> </label>
+			<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e('Email:', 'initlanesis') ?> </label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" value="<?php echo $instance['email']; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e('Address:', 'novo') ?> </label>
+			<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e('Address:', 'initlanesis') ?> </label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" value="<?php echo $instance['address']; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'skype' ); ?>"><?php _e('Skype:', 'novo') ?> </label>
+			<label for="<?php echo $this->get_field_id( 'skype' ); ?>"><?php _e('Skype:', 'initlanesis') ?> </label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'skype' ); ?>" name="<?php echo $this->get_field_name( 'skype' ); ?>" value="<?php echo $instance['skype']; ?>" />
-		</p>        
-		
+		</p>
+
 	<?php
 	}
 }
