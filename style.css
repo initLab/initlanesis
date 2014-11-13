@@ -508,7 +508,7 @@ input[type="search"] {
  a, a:visited {
 	outline: none;
 	text-decoration: none;
-	color: #FF304E;
+	color: #027da1;
 	transition: color linear 0.15s;
 	-ms-transition: color linear 0.15s;
 	-moz-transition: color linear 0.15s;
