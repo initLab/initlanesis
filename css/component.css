@@ -1417,12 +1417,16 @@ perspective effects (not including the modals and the overlay).
 /* Added animation */
 .team,
 .special-services-box, .columns{
-	opacity: 0;
+	/* NUKE THE ANIMATION */
+	opacity: 1;
 }
 
 .zp_start_animation.team,
 .zp_start_animation.special-services-box,
 .zp_start_animation.columns{
+/*
+ * NUKE THE ANIMATION
+ *
 	-webkit-animation:zp_appear 1s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
 	-moz-animation:zp_appear 1s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
 	-o-animation:zp_appear 1s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -1432,18 +1436,22 @@ perspective effects (not including the modals and the overlay).
 	-webkit-transform:scale(1);
 	-o-transform:scale(1);
 	transform:scale(1);
+ */
 }
 .portfolio_shortcode,
 .zp-grid-wrapper{
-	opacity: 0;
+	/* NUKE THE ANIMATION */
+	opacity: 1;
 }
 .zp_start_animation.portfolio_shortcode,
 .zp_start_animation.zp-grid-wrapper{
+	/* NUKE THE ANIMATION
 	-webkit-animation:zp_fadeUp 1s 1 ;
 	-moz-animation:zp_fadeUp 1s 1;
 	-o-animation:zp_fadeUp 1s 1;
 	animation:zp_fadeUp 1s 1;
 	opacity: 1;
+	*/
 }
 
 .zp_show{
