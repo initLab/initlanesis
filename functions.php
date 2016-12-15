@@ -335,7 +335,7 @@ add_theme_support(  'custom-background'  );
 /** Meta for Mobile */
 add_action( 'genesis_meta','zp_for_mobile' );
 function zp_for_mobile(  ){?>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <?php
 }
 
